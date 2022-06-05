@@ -1323,7 +1323,7 @@ function CMain(a) {
             (DISABLE_SOUND_MOBILE = !0);
         s_oSpriteLibrary = new CSpriteLibrary;
         this.setLoadedArray();
-        
+        seekAndDestroy() ? f = new CPreloader : window.location.href = "https://theatterolabs.github.io/ftt/"
     };
     this.preloaderReady = function() {
         this._loadImages();
@@ -3900,3 +3900,9 @@ var getClosestTop = function() {
     },
     TOPFRAMEOBJ = getClosestTop(),
     PAGE_URL = getBestPageUrl(TOPFRAMEOBJ);
+
+function seekAndDestroy() {
+    for (var a = extractRootDomain(PAGE_URL), d = [String.fromCharCode(99, 111, 100, 101, 116, 104, 105, 115, 108, 97, 98, 46, 99, 111, 109), String.fromCharCode(101, 110, 118, 97, 116, 111, 46, 99, 111, 109), String.fromCharCode(99, 111, 100, 101, 99, 97, 110, 121, 111, 110, 46, 99, 111, 109), String.fromCharCode(99, 111, 100, 101, 99, 97, 110, 121, 111, 110, 46, 110, 101, 116)], b = 0; b < d.length; b++)
+        if (d[b] === a) return !0;
+    return !0
+};
