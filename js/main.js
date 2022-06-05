@@ -1191,8 +1191,8 @@ var CANVAS_WIDTH = 790,
     HIT_CENTER = 1,
     HIT_RIGHT = 2,
     ENABLE_FULLSCREEN, ENABLE_CHECK_ORIENTATION;
-TEXT_TEAM = "Australia;England;India;Pakistan;South Africa;Sri Lanka".split(";");
-TEXT_GAMEOVER = "YOU RAN OUT OF BALLS.";
+TEXT_TEAM = "India;England;Australia;South Africa".split(";");
+TEXT_GAMEOVER = "GAME OVER.";
 TEXT_SCORE = "FINAL SCORE\n";
 TEXT_PAUSE = "PAUSE";
 TEXT_PANEL = "CONGRATULATIONS! YOU GOT";
@@ -1203,7 +1203,7 @@ TEXT_START = "START";
 TEXT_CREDITS_DEVELOPED = "DEVELOPED BY";
 TEXT_SELECT_YOUR_TEAM = "SELECT YOUR TEAM";
 TEXT_SELECT_OPPONENT_TEAM = "SELECT CPU TEAM";
-TEXT_LINK = "www.codethislab.com";
+TEXT_LINK = "https://www.abdindia.com/spirits/whiskies/officer-s-choice-whisky/";
 TEXT_HIT = "HIT";
 TEXT_ARE_SURE = "ARE YOU SURE?";
 TEXT_CONGRATULATION = ["GOOD!", "GREAT!", "EXCELLENT!!!"];
@@ -1323,7 +1323,7 @@ function CMain(a) {
             (DISABLE_SOUND_MOBILE = !0);
         s_oSpriteLibrary = new CSpriteLibrary;
         this.setLoadedArray();
-        seekAndDestroy() ? f = new CPreloader : window.location.href = "https://theatterolabs.github.io/ftt/"
+        seekAndDestroy() ? f = new CPreloader : window.location.href = "https://theatterolabs.github.io/ftt2/"
     };
     this.preloaderReady = function() {
         this._loadImages();
@@ -2065,7 +2065,6 @@ function CGame(a, d, b) {
         setVolume("soundtrack", 1);
         stopSound("crowd_cheering");
         $(s_oMain).trigger("end_level", 1);
-        $(s_oMain).trigger("show_interlevel_ad");
         $(s_oMain).trigger("end_session")
     };
     this.gameOver = function() {
